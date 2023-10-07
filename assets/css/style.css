@@ -322,6 +322,7 @@ main {
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
+  height: 100%;
 }
 
 .sidebar.active {
@@ -916,67 +917,55 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
-.filter-list {
+.slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
   display: none;
 }
 
-.filter-select-box {
-  position: relative;
-  margin-bottom: 25px;
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
 }
 
-.filter-select {
-  background: var(--eerie-black-2);
-  color: var(--light-gray);
+.slider-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid var(--jet);
-  border-radius: 14px;
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-}
-
-.filter-select.active .select-icon {
-  transform: rotate(0.5turn);
-}
-
-.select-list {
-  background: var(--eerie-black-2);
+  column-gap: 1rem;
   position: absolute;
-  top: calc(100% + 6px);
-  width: 100%;
-  padding: 6px;
-  border: 1px solid var(--jet);
-  border-radius: 14px;
-  z-index: 2;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: 0.15s ease-in-out;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
-.filter-select.active + .select-list {
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
   opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-.select-item button {
-  background: var(--eerie-black-2);
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-  text-transform: capitalize;
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 8px;
-}
-
-.select-item button:hover {
-  --eerie-black-2: hsl(240, 2%, 20%);
 }
 
 .project-list {
@@ -1014,7 +1003,8 @@ main {
   height: 200px;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 
 .project-img::before {
