@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>K3KK0_23 - Personal Portfolio</title>
 
     <!--
@@ -23,6 +23,10 @@
     - custom css link
   -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <!--
     - google font link
@@ -163,6 +167,7 @@
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Portfolio</button>
             </li>
+
           </ul>
         </nav>
 
@@ -274,15 +279,28 @@
           </header>
 
           <section class="projects">
-              <li class="project-item active">
+            <ul>
+              <li class="project-item active carousel-item">
                   <figure class="project-img">
 
                     <section class="container">
                       <div class="slider-wrapper">
                         <div class="slider">
-                          <img id="slide-1" src="./assets/images/project-1.jpg"/>
-                          <img id="slide-2" src="./assets/images/project-1.jpg"/>
-                          <img id="slide-3" src="./assets/images/project-1.jpg"/>
+                          <img 
+                          id="slide-1" 
+                          src="./assets/images/project-1.jpg" 
+                          alt="Immagine 1"
+                          />
+                          <img 
+                          id="slide-2" 
+                          src="./assets/images/project-1.jpg" 
+                          alt="Immagine 2"
+                          />
+                          <img 
+                          id="slide-3" 
+                          src="./assets/images/project-1.jpg" 
+                          alt="Immagine 3"
+                          />
                         </div>
                         <div class="slider-nav">
                           <a href="#slide-1"></a>
@@ -299,15 +317,25 @@
                 </a>
               </li>
 
-              <li class="project-item active">
+              <li class="project-item active carousel-item">
                 <figure class="project-img">
-
                   <section class="container">
                     <div class="slider-wrapper">
                       <div class="slider">
-                        <img id="slide-1a" src="./assets/images/project-2.jpg"/>
-                        <img id="slide-2a" src="./assets/images/project-2.jpg"/>
-                        <img id="slide-3a" src="./assets/images/project-2.jpg"/>
+                        <img id="slide-1a"
+                          src="./assets/images/project-2.jpg"
+                          alt="Immagine 1a"
+                        />
+                        <img
+                          id="slide-2a"
+                          src="./assets/images/project-2.jpg"
+                          alt="Immagine 2a"
+                        />
+                        <img
+                          id="slide-3a"
+                          src="./assets/images/project-2.jpg"
+                          alt="Immagine 3a"
+                        />
                       </div>
                       <div class="slider-nav">
                         <a href="#slide-1a"></a>
@@ -321,38 +349,46 @@
                 <h3 class="project-title">Titolo</h3>
 
                 <p class="project-category">work in progress</p>
-              </a>
-            </li>
+              </li>
 
-            <li class="project-item active">
-              <figure class="project-img">
-
-                <section class="container">
-                  <div class="slider-wrapper">
-                    <div class="slider">
-                      <img id="slide-1b" src="./assets/images/project-3.jpg"/>
-                      <img id="slide-2b" src="./assets/images/project-3.jpg"/>
-                      <img id="slide-3b" src="./assets/images/project-3.jpg"/>
+              <li class="project-item active carousel-item">
+                <figure class="project-img">
+                  <section class="container">
+                    <div class="slider-wrapper">
+                      <div class="slider">
+                        <img
+                          id="slide-1b"
+                          src="./assets/images/project-3.jpg"
+                          alt="Immagine 1b"
+                        />
+                        <img
+                          id="slide-2b"
+                          src="./assets/images/project-3.jpg"
+                          alt="Immagine 2b"
+                        />
+                        <img
+                          id="slide-3b"
+                          src="./assets/images/project-3.jpg"
+                          alt="Immagine 3b"
+                        />
+                      </div>
+                      <div class="slider-nav">
+                        <a href="#slide-1b"></a>
+                        <a href="#slide-2b"></a>
+                        <a href="#slide-3b"></a>
+                      </div>
                     </div>
-                    <div class="slider-nav">
-                      <a href="#slide-1b"></a>
-                      <a href="#slide-2b"></a>
-                      <a href="#slide-3b"></a>
-                    </div>
-                  </div>
-                </section>
-              </figure>
+                  </section>
+                </figure>
 
-              <h3 class="project-title">Titolo</h3>
+                <h3 class="project-title" data-nav-link="Progetto1">Titolo</h3>
 
-              <p class="project-category">work in progress</p>
-            </a>
-          </li>
-
-
-          </ul>
+                <p class="project-category">work in progress</p>
+              </li>
+            </ul>
           </section>
         </article>
+
       </div>
     </main>
 
@@ -360,6 +396,7 @@
     - custom js link
   -->
     <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!--
     - ionicon link
