@@ -357,7 +357,7 @@ main {
   font-weight: var(--fw-300);
   width: max-content;
   padding: 3px 12px;
-  margin: 5px;
+  margin: 5px auto;
   border-radius: 8px;
 }
 
@@ -1959,7 +1959,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .info-content .title {
-    margin: auto;
+    margin: 5px auto;
   }
 
   .info_more-btn {
