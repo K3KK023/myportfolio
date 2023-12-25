@@ -326,7 +326,7 @@ main {
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: fit-content;
 }
 
 .sidebar-info {
@@ -419,7 +419,6 @@ main {
 .contact-item {
   min-width: 100%;
   display: flex;
-  align-items: center;
   gap: 16px;
 }
 
@@ -1398,7 +1397,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .sidebar.active {
-    max-height: 584px;
+    max-height: fit-content;
   }
 
   .sidebar-info {
